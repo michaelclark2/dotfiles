@@ -1,7 +1,6 @@
 [character]
 success_symbol = "💫"
 error_symbol = "🚨"
-use_symbol_for_status = true
 disabled = false
 
 [git_branch]
