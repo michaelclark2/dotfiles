@@ -1,0 +1,25 @@
+[character]
+success_symbol = "💫"
+error_symbol = "🚨"
+use_symbol_for_status = true
+disabled = false
+
+[git_branch]
+truncation_length = 18
+
+[directory]
+style = "bold bright-yellow"
+
+[aws]
+format = 'on [$symbol$profile]($style) '
+symbol = '⬢ '
+style = "#ff6600"
+
+[nodejs]
+style = "bold dimmed green"
+
+[package]
+disabled = true
+
+[python]
+style = "bold bright-green"
