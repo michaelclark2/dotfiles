@@ -1,0 +1,30 @@
+alias ll="ls -l"
+alias la="ls -a"
+alias c="clear"
+alias cd..="cd .."
+alias tf="terraform"
+alias a='source venv/bin/activate'
+
+alias gs="git status"
+alias gb="git checkout -b"
+alias gc="git commit -m"
+alias ga="git add -A; git status"
+alias gac="git add -A; git commit -m "
+alias gap="git add -p"
+alias gch="git checkout"
+alias gl="git log --oneline --graph --shortstat"
+alias gitpull="git pull"
+alias gitpul="git pull"
+alias gitpush="git push"
+alias gitpus="git push"
+
+alias rc="code ~/.zshrc"
+alias slate="code ~/.slate"
+alias prompt="code ~/.config/starship.toml"
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+alias weather='curl "http://wttr.in/37211"'
+alias crontabe='EDITOR=nano crontab -e'
+alias nukepip='source venv/bin/activate && pip uninstall -y -r <(pip freeze) && pip install -r requirements-dev.txt'
+alias nukenpm='rm -rf node_modules && npm i'
+alias lsports="sudo lsof -i -P -n | grep LISTEN"
