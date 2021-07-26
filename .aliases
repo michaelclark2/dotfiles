@@ -13,10 +13,8 @@ alias gac="git add -A; git commit -m "
 alias gap="git add -p"
 alias gch="git checkout"
 alias gl="git log --oneline --graph --shortstat"
-alias gitpull="git pull"
-alias gitpul="git pull"
-alias gitpush="git push"
-alias gitpus="git push"
+alias gpd="git pull"
+alias gpu="git push"
 
 alias rc="code ~/.zshrc"
 alias slate="code ~/.slate"
@@ -28,3 +26,5 @@ alias crontabe='EDITOR=nano crontab -e'
 alias nukepip='source venv/bin/activate && pip uninstall -y -r <(pip freeze) && pip install -r requirements-dev.txt'
 alias nukenpm='rm -rf node_modules && npm i'
 alias lsports="sudo lsof -i -P -n | grep LISTEN"
+
+alias awsume='f(){ export AWS_PROFILE="$1"; }; f'
