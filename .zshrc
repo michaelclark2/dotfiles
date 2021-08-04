@@ -4,13 +4,6 @@ if [ -e "$HOME/.workenv" ]; then
     source ~/.workenv
 fi
 
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-compinit
-
-# aws completer
-complete -C '/usr/local/bin/aws_completer' aws
-
 # longer history
 export HISTSIZE=1000000
 export SAVEHIST=1000000
