@@ -1,0 +1,125 @@
+# This is the default .slate file.
+# If no ~/.slate file exists this is the file that will be used.
+
+config defaultToCurrentScreen true'
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+alias hyper cmd;ctrl;alt;shift
+
+# Application aliases and bindings
+alias editor 'Code'
+bind v:alt;cmd focus ${editor}
+
+alias chrome 'Google Chrome'
+bind c:alt;cmd focus ${chrome}
+
+alias terminal 'iTerm2'
+bind x:alt;cmd focus ${terminal}
+
+alias slack 'Slack'
+bind s:alt;cmd focus ${slack}
+
+# Resize Bindings
+bind right:alt;cmd       resize +10% +0
+bind left:alt;cmd        resize -10% +0
+bind up:alt;cmd          resize +0   -10%
+bind down:alt;cmd        resize +0   +10%
+bind right:${hyper}  resize -10% +0 bottom-right
+bind left:${hyper}   resize +10% +0 bottom-right
+bind up:${hyper}     resize +0   +10% bottom-right
+bind down:${hyper}   resize +0   -10% bottom-right
+
+# Push Bindings
+bind right:ctrl;cmd  push right bar-resize:screenSizeX/2
+bind left:ctrl;cmd   push left  bar-resize:screenSizeX/2
+bind up:ctrl;cmd     push up    bar-resize:screenSizeY/2
+bind down:ctrl;cmd   push down  bar-resize:screenSizeY/2
+
+# Nudge Bindings
+bind right:cmd;shift;alt nudge +10% +0
+bind left:cmd;shift;alt  nudge -10% +0
+bind up:cmd;shift;alt    nudge +0   -10%
+bind down:cmd;shift;alt  nudge +0   +10%
+
+# Throw Bindings
+bind 1:ctrl;alt         throw 0 resize
+bind 2:ctrl;alt         throw 1 resize
+bind 3:ctrl;alt         throw 2 resize
+bind right:ctrl;alt;cmd throw right resize
+bind left:ctrl;alt;cmd  throw left  resize
+bind up:ctrl;alt;cmd    throw up    resize
+bind down:ctrl;alt;cmd  throw down  resize
+
+# Focus Bindings
+bind right:cmd    focus right
+bind left:cmd     focus left
+bind up:cmd       focus up
+bind down:cmd     focus down
+bind up:cmd;alt   focus behind
+bind down:cmd;alt focus behind
+
+# Window Hints
+bind esc:cmd hint
+
+# Monitors
+alias sam 1920x1080
+alias mac 1440x900
+
+# Screen resizing
+alias sam-full move screenOriginX;screenOriginY screenSizeX;screenSizeY ${sam}
+alias sam-leftHalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY ${sam}
+alias sam-rightHalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY ${sam}
+alias sam-center move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/2;screenSizeY ${sam}
+
+# Thirds
+alias sam-leftThird move screenOriginX;screenOriginY screenSizeX/3;screenSizeY ${sam}
+alias sam-midThird move screenOriginX+screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY ${sam}
+alias sam-rightThird move screenOriginX+2*screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY ${sam}
+alias sam-leftTwoThirds move screenOriginX;screenOriginY 2*screenSizeX/3;screenSizeY ${sam}
+alias sam-rightTwoThirds move screenOriginX+screenSizeX/3;screenOriginY 2*screenSizeX/3;screenSizeY ${sam}
+
+alias sam-leftFifth move screenOriginX;screenOriginY screenSizeX/5;screenSizeY ${sam}
+alias sam-rightFourFifths move (screenOriginX+screenSizeX/5)+14;screenOriginY (4*screenSizeX/5)-14;screenSizeY ${sam}
+alias sam-topHalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2 ${sam}
+alias sam-bottomHalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2 ${sam}
+
+# Corners
+alias sam-topLeft move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2 ${sam}
+alias sam-bottomRight move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2 ${sam}
+alias sam-topRight move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2 ${sam}
+alias sam-bottomLeft move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2 ${sam}
+
+# Screen resizing
+alias mac-full move screenOriginX;screenOriginY screenSizeX;screenSizeY ${mac}
+alias mac-leftHalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY ${mac}
+alias mac-rightHalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY ${mac}
+alias mac-center move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/2;screenSizeY ${mac}
+
+# Thirds
+alias mac-leftThird move screenOriginX;screenOriginY screenSizeX/3;screenSizeY ${mac}
+alias mac-midThird move screenOriginX+screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY ${mac}
+alias mac-rightThird move screenOriginX+2*screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY ${mac}
+alias mac-leftTwoThirds move screenOriginX;screenOriginY 2*screenSizeX/3;screenSizeY ${mac}
+alias mac-rightTwoThirds move screenOriginX+screenSizeX/3;screenOriginY 2*screenSizeX/3;screenSizeY ${mac}
+
+alias mac-leftFifth move screenOriginX;screenOriginY screenSizeX/5;screenSizeY ${mac}
+alias mac-rightFourFifths move (screenOriginX+screenSizeX/5)+14;screenOriginY (4*screenSizeX/5)-14;screenSizeY ${mac}
+alias mac-topHalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2 ${mac}
+alias mac-bottomHalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2 ${mac}
+
+# Corners
+alias mac-topLeft move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2 ${mac}
+alias mac-bottomRight move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2 ${mac}
+alias mac-topRight move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2 ${mac}
+alias mac-bottomLeft move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2 ${mac}
+
+# Layouts
+layout coding ${editor}:IGNORE_FAIL,REPEAT ${sam-full}
+layout coding ${terminal}:REPEAT ${sam-leftThird}
+layout coding ${chrome}:REPEAT,TITLE_ORDER_REGEX=^Meet throw 2 resize
+layout coding 'Spotify' ${mac-center}
+layout coding 'Calendar' move (screenOriginX+screenSizeX)-(screenSizeX/5)-26;screenSizeY 0;screenSizeY ${mac} | throw 3
+layout coding ${slack} move screenOriginX;screenOriginY screenSizeX-(screenSizeX/5)-26;screenSizeY-(screenSizeY/10) ${mac} | throw 3 | focus above
+
+bind x:alt;cmd;shift;ctrl layout coding
