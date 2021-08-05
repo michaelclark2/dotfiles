@@ -8,8 +8,12 @@ fi
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 
+autoload -Uz compinit && compinit
+
 # case insensitive tab completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
+export CLICOLOR=1
 
 export PATH=/usr/local/bin:${PATH}
 
