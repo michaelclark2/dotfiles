@@ -14,6 +14,7 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 export CLICOLOR=1
+export LSCOLORS=Exfxcxdxbxegedabagacad
 
 export PATH=/usr/local/bin:${PATH}
 
