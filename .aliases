@@ -22,6 +22,7 @@ alias prompt="code ~/.config/starship.toml"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias weather='curl "http://wttr.in/37211"'
+alias apod='open https://apod.nasa.gov/apod/astropix.html'
 alias crontabe='EDITOR=nano crontab -e'
 alias nukepip='source venv/bin/activate && pip uninstall -y -r <(pip freeze) && pip install -r requirements-dev.txt'
 alias nukenpm='rm -rf node_modules && npm i'
