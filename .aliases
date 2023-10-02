@@ -28,4 +28,6 @@ alias nukepip='source venv/bin/activate && pip uninstall -y -r <(pip freeze) && 
 alias nukenpm='rm -rf node_modules && npm i'
 alias lsports="sudo lsof -i -P -n | grep LISTEN"
 
-alias awsume='f(){ export AWS_PROFILE="$1"; }; f'
+alias awsume='f(){ export AWS_SDK_LOAD_CONFIG=1; export AWS_PROFILE="$1"; }; f'
+
+alias rp='ssh pi@raspberrypi.local'
